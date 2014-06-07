@@ -1,0 +1,4 @@
+{% extends "base.djhtml" %}
+{% block content %}
+    <h1>membership</h1>
+{% endblock %}

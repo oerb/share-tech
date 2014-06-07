@@ -1,0 +1,4 @@
+{% extends "base.djhtml" %}
+{% block content %}
+    <h1>User Items</h1>
+{% endblock %}
