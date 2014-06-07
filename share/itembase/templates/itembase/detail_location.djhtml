@@ -1,0 +1,69 @@
+{% extends "base.djhtml" %}
+{% block content %}
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>Location Members</h3>
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td>Username</td>
+                            <td>E-Mail</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for membership in members %}
+                        <tr>
+                            <td>{{ membership.me_user }}</td>
+                            <td>{{ membership.me_user.email }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>Location Items</h3>
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td>Item Name</td>
+                            <td>Storage Info</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>foo</td>
+                            <td>foo1</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block banner_right %}
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>{{ location }}</h3>
+        </div>
+        <div class="panel-body">
+            <p>Geodaten: {{ location.ls_geo }}</p>
+            <p>Adresse: {{ location.lc_adr }}</p>
+            <p>PLZ: {{ location.lc_plz }}</p>
+            <p>Ort: {{ location.lc_city }}</p>
+            <p>E-Mail: {{ location.lc_mail }}</p>
+            <h3>Info</h3>
+            <div>{{ location.lc_info }}</div>
+        </div>
+    </div>
+{% endblock %}

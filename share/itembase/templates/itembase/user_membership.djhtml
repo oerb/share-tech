@@ -1,8 +1,7 @@
 {% extends "base.djhtml" %}
 {% block content %}
-    <h1>locations</h1>
-
-    <div class="panel panel-default">
+<h1>membership</h1>
+<div class="panel panel-default">
     <div class="panel-heading">
         <h3>{{ task_header }}</h3>
     </div>
@@ -15,18 +14,17 @@
                     <td>Adresse</td>
                     <td>PLZ</td>
                     <td>Ort</td>
-                    <td>Join</td>
                 </tr>
             </thead>
             <tbody>
-            {% for location in locations %}
+            {% for membership in memberships %}
                 <tr>
-                    <td><a href="{% url "itembase/location_detail" location.id %}">{{ location.lc_name }}</a></td>
-                    <td>{{ location.lc_geo }}</td>
-                    <td>{{ location.lc_adr}}</td>
-                    <td>{{ location.lc_plz }}</td>
-                    <td>{{ location.lc_city }}</td>
-                    <td><a href="{% url "itembase/join_location" location.id %}"><span class="glyphicon glyphicon-thumbs-up"></span></a></a></td>
+                    <td><a href="{% url "itembase/location_detail" membership.me_location.id %}">{{ membership.me_location.lc_name }}</a></td>
+                    <td>{{ membership.me_location.lc_geo }}</td>
+                    <td>{{ membership.me_location.lc_adr}}</td>
+                    <td>{{ membership.me_location.lc_plz }}</td>
+                    <td>{{ membership.me_location.lc_city }}</td>
+                    <td>{{ membership }}</td>
                 </tr>
             {% endfor %}
             </tbody>

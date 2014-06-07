@@ -27,6 +27,10 @@
                     Anmelden
                 </button>
             </div>
+            <div class="text-center">
+                </br>
+                <a href="{% url "itembase/new_user" %}">AddNew User</a>
+            </div>
         </form>
     </div>
 {% endblock %}

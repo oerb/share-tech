@@ -39,7 +39,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#k">aconomy.org/share</a>
+              <a class="navbar-brand" href="{% url 'itembase/home' %}">aconomy.org/share</a>
             </div>
             <div class="navbar-collapse collapse" id="immotask-navbar-1">
                 <ul class="nav navbar-nav">
