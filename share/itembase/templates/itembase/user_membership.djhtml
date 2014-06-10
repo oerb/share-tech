@@ -1,9 +1,8 @@
 {% extends "base.djhtml" %}
 {% block content %}
-<h1>membership</h1>
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h3>{{ task_header }}</h3>
+        <h3>Membership</h3>
     </div>
     <div class="table-responsive">
         <table class="table table-striped">

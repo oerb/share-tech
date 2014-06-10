@@ -158,7 +158,7 @@ def new_location(request):
     data = {}
     template = 'itembase/simpleform.djhtml'
     data['message'] = None
-    data['headstring'] = 'Neue Location'
+    data['headstring'] = 'New Location'
     if request.method == "POST":
         form = LocationForm(request.POST)
         if form.is_valid():
