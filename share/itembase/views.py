@@ -102,6 +102,18 @@ def user_items(request):
     return render(request, template, data)
 
 
+@login_required
+def item_events(request, item_id):
+    """
+    Show the Item events
+    """
+    data = {}
+    template = 'itembase/item_events.djhtml'
+    data['events'] = ShareEvents.objects.filter(se_item = item_id)
+    data['item'] = get_object_or_404(Items, pk=item_id)
+    return render(request, template, data)
+
+
 
 def new_user(request):
     """
@@ -128,7 +140,7 @@ def new_user(request):
 
 def new_item(request):
     """
-    New User
+    New item
     """
     data = {}
     template = 'itembase/simpleform.djhtml'
@@ -153,7 +165,7 @@ def new_item(request):
 
 def new_location(request):
     """
-    New User
+    New Location
     """
     data = {}
     template = 'itembase/simpleform.djhtml'

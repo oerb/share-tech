@@ -18,7 +18,7 @@
             <tbody>
             {% for item in items %}
                 <tr>
-                    <td>{{ item.it_name }}</td>
+                    <td><a href="{% url 'itembase/item_events' item.id %}"> {{ item.it_name }}</a></td>
                     <td>{{ item.it_back_to_owner }}</td>
                     <td>{{ item.it_personal_handover}}</td>
                     <td>{{ item.it_storageinfo }}</td>

@@ -1,7 +1,7 @@
 __author__ = 'oerb'
 from django.conf.urls import patterns, url
 from .views import home, locations, location_detail, membership, user_items, new_user, new_item, new_location
-from .views import user_membership, join_location
+from .views import user_membership, join_location, item_events
 
 urlpatterns = patterns('',
                        # Examples
@@ -15,6 +15,7 @@ urlpatterns = patterns('',
                        url(r'^members/(?P<location_id>\d+)$', membership, name='itembase/locationmembers'),
                        url(r'^membership', user_membership, name='itembase/user_membership'),
                        url(r'^items', user_items, name='itembase/useritems'),
+                       url(r'^itemevents/(?P<item_id>\d+)$', item_events, name='itembase/item_events'),
                        url(r'^newuser', new_user, name='itembase/new_user'),
                        url(r'^newitem', new_item, name='itembase/new_item'),
                        url(r'^newlocation', new_location, name='itembase/new_location'),

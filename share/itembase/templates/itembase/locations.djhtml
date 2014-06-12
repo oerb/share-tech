@@ -1,6 +1,6 @@
 {% extends "base.djhtml" %}
 {% block content %}
-    <div class="panel panel-default">
+<div class="panel panel-default">
     <div class="panel-heading">
         <h3>Locations</h3>
     </div>

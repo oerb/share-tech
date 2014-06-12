@@ -1,0 +1,30 @@
+{% extends "base.djhtml" %}
+{% block content %}
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>Item Events - {{ item }}</h3>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Possessor</td>
+                    <td>add Date</td>
+                    <td>Possessor Date</td>
+                    <td>info</td>
+                </tr>
+            </thead>
+            <tbody>
+            {% for event in events %}
+                <tr>
+                    <td>{{ event.se_possessor }}</td>
+                    <td>{{ event.se_add }}</td>
+                    <td>{{ event.se_possessor_date }}</td>
+                    <td>{{ event.se_info }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
